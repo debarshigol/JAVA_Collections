@@ -12,6 +12,12 @@ public class TestingCollection {
 		list.add(-98);
 		list.add(0);
 		printCollection(list);
+		// collections concept cmes with some of the inbuild methods
+		// to sort thr list
+		//list.sort(null);
+		Collections.sort(list);
+		Collections.reverse(list);
+		printCollection(list);
 		
 
 	}
