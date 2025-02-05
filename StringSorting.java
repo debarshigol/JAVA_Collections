@@ -21,4 +21,21 @@ public class StringSorting {
 	public static void sortInDescending(List<String> strlist) {
 		Collections.reverse(strlist);
 	}
+	// using custom Comparator
+	// write one method that will not use any methods listed inside collections
+	public static void sortDescUsingComp(List<String> strlist) {
+		Collections.sort(strlist, new Comparator<String>() {
+		    @Override
+		    public int compare(String s1, String s2) {
+		        if (s1.equals(s2)) {
+		            return 0;
+		        }
+		        if (s1.charAt(0)<s2.charAt(0)) {
+		            return 1;
+		        }
+		        return -1;
+		    }
+		});
+		
+	}
 }
